@@ -1,0 +1,21 @@
+<h2>{{name}}</h2>
+
+<table>  
+  <tr>
+    <td *ngIf="showConcatenationColumn">Concatenation</td>
+    <td>Addition</td>
+    <td>Multiplication</td>
+    <td>Factorial</td>
+  </tr>
+  <tr>
+    <td *ngIf="showConcatenationColumn">{{function1}}</td>
+    <td>{{sum}}</td>
+    <td>{{product}}</td>
+    <td>{{factories}}</td>
+  </tr>
+</table>
+
+<ul>
+    <li *ngFor="let day of weekDayList">{{day}}</li>
+</ul>
+
