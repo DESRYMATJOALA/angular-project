@@ -1,18 +1,41 @@
-<!-- <h1>
-  {{title}}
-</h1>
-<h1>
-  {{name}}
-</h1>
-<h2>{{Concat}}</h2> -->
 
-<a>Home</a> <a>Contact us</a>
 
-<div (click)="gotoPageSection('Home')">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+      
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a (click)="gotoPageSection('Home')">Home</a></li>
+      <li class="active"><a (click)="gotoPageSection('Contact-us')">Contact-us </a></li>
+      <li class="active"><a (click)="gotoPageSection('gallery')">gallery</a></li>
+      <li class="active"><a (click)="gotoPageSection('about-us')">about</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+<h1><button type="button" class="btn">App Page</button></h1>
+
+
+
+<router-outlet></router-outlet>
+
+<!-- <div *ngIf="showHomeSection">
   <app-home></app-home>
 </div>
 
-<div (click)="gotoPageSection('Contact-us')">
-  <app-home></app-home> 
-  <!-- // create new contact us -->
+<div *ngIf="showContactUSSection">
+  <app-contact></app-contact>
 </div>
+
+<div *ngIf="showAboutUSSection">
+  <app-aboutUs></app-aboutUs>
+</div>
+
+<div *ngIf="showGallerySection">
+  <app-gallery></app-gallery>
+</div> -->
+
+

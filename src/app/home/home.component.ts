@@ -50,9 +50,7 @@ export class HomeComponent implements OnInit {
        return (number * this.factorial(number - 1));     // function invokes itself
     }}
     
-   // interface OnInit {
-    //  ngOnInit(): void
-   // }
+  
     } 
     
 

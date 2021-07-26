@@ -1,0 +1,73 @@
+<h2>Welcome to ContactUS page</h2>
+<!-- <ul>
+    <li><a href="https://mail.google.com/"target="_blank">EMAIL</a></li>
+    <li><a href="https://za.address.com/"target="_blank">ADDRESS</a></li>
+    <li><a href="https://za.contact.com/"target="_blank">CONTACT</a></li>
+    <li><a href="https://za.linkedin.com/" target="_blank">LINKEDIN</a></li>
+  </ul> -->
+
+<!-- <form> -->
+  <body>
+    <h1>Survey form</h1>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" [(ngModel)]="name"  class="form-control" id="usr">
+  </div>
+  <div class="form-group">
+    <label for="number">Mobile number:</label>
+    <input type="text" [(ngModel)]="mobileNumber"  class="form-control" id="number">
+  </div>  
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" [(ngModel)]="comment" rows="5" id="comment"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="question">where did you hear about us:</label>
+    <select type="text" class="mdb-select md-form" [(ngModel)]="hearAboutUs">
+      <option  >Where did you hear about us</option>
+      <option value="Social media">Social media</option>
+      <option value="News paper">News paper</option>
+      <option value="A Friend">A Friend</option>
+      
+    </select>
+  </div>
+  <div class="form-group">
+    <label><input type="radio" [(ngModel)]="gender" class="form-control" id="gender" name="optradio" value="male" checked>male</label>
+    <label><input type="radio" [(ngModel)]="gender" class="form-control" id="gender" name="optradio" value="female" checked>female</label>
+  </div>
+  
+  
+
+  <button type="submit" (click)="submitForm()" class="btn btn-default">Submit</button>
+<!-- </form> -->
+
+<div class="container">            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mobile Number</th>
+        <th>Comment</th>
+        <th>gender</th>
+        <th>where did you hear about us</th>
+        <th>Date</th>
+        <th>Currency</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of contactUsUserList;let rowIndex = index" >
+        <td>{{record.name}}</td>
+        <td>{{record.mobileNumber}}</td>
+        <td>{{record.comment}}</td>
+        <td>{{record.gender | uppercase}}</td>
+        <td>{{record.hearAboutUs}}</td>
+        <td>{{record.date | date:'MM/dd/yyyy' | uppercase}}</td>
+        <td>{{record.currency | currency:"CAD":true}}</td>
+        <td><button  (click)="deleteRow(rowIndex)">DELETE</button> </td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
+
+  </body>

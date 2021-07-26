@@ -1,0 +1,16 @@
+h1{
+    font-style: normal;
+    color: black;
+}
+li {
+    display: inline;
+    
+    width: 100%;
+     height: 400;
+     padding: 200px;
+    
+}
+  
+body{
+    background-color: white;
+}
